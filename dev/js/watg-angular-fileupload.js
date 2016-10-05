@@ -9,7 +9,7 @@
 
 (function() {
 	var app = angular.module('watgFileuploadModule');
-	app.config(appConfig);
+	app.config(["$httpProvider", "$routeProvider", appConfig]);
 	app.run(appRun);
 
 	function appConfig($httpProvider, $routeProvider) {
@@ -40,7 +40,7 @@
     function watgFileupload() {
         return {
             restrict: "E",
-            templateUrl: 'src/app/directives/templates/watgFileuploadTemplate.html',
+            templateUrl: 'app/directives/templates/watgFileuploadTemplate.html',
             scope: {
                 config: "="
             },

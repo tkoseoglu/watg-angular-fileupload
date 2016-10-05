@@ -5,7 +5,7 @@
     function watgFileupload() {
         return {
             restrict: "E",
-            templateUrl: 'src/app/directives/templates/watgFileuploadTemplate.html',
+            templateUrl: 'app/directives/templates/watgFileuploadTemplate.html',
             scope: {
                 config: "="
             },

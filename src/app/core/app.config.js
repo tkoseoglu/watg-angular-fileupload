@@ -1,6 +1,6 @@
 (function() {
 	var app = angular.module('watgFileuploadModule');
-	app.config(appConfig);
+	app.config(["$httpProvider", "$routeProvider", appConfig]);
 	app.run(appRun);
 
 	function appConfig($httpProvider, $routeProvider) {

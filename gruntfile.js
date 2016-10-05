@@ -158,6 +158,10 @@ module.exports = function(grunt) {
                     removeStyleLinkTypeAttributes: true
                 }
             },
+            dev: {
+                src: ['src/app/directives/templates/*.html'],
+                dest: 'dev/js/watg-angular-fileupload.tpl.js'
+            },
             dist: {
                 src: ['src/app/directives/templates/*.html'],
                 dest: 'dist/js/watg-angular-fileupload.tpl.js'
@@ -173,6 +177,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks('grunt-html2js');
-    grunt.registerTask('dev', ["jshint", 'concat', 'uglify', 'concat_css', 'cssmin', 'copy', 'connect:dev', 'watch']); //, 'watch'
+    grunt.registerTask('dev', ["jshint", 'concat', 'uglify', 'concat_css', 'cssmin', 'copy', 'connect:dev', 'html2js:dev', 'watch']); //, 'watch'
     grunt.registerTask('dist', ['concat:appDist', 'uglify:appDist', 'concat_css:assetsDist', 'cssmin:assetsDist', 'copy:dist', 'html2js:dist']);
 };
