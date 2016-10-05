@@ -144,7 +144,7 @@ module.exports = function(grunt) {
         html2js: {
             options: {
                 base: 'src',
-                module: 'watgFileupoad.templates',
+                module: 'watgFileupload.templates',
                 singleModule: true,
                 useStrict: true,
                 htmlmin: {
@@ -159,7 +159,7 @@ module.exports = function(grunt) {
                 }
             },
             dist: {
-                src: ['src/app/directives/templates/*.html'],
+                src: ['app/directives/templates/*.html'],
                 dest: 'dist/js/watg-angular-fileupload.tpl.js'
             }
         }
