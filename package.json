@@ -1,5 +1,5 @@
 {
-  "name": "watg-angular-autocomplete",
+  "name": "watg-angular-fileupload",
   "version": "1.0.0",
   "description": "",
   "main": "gruntfile.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tkoseoglu/watg-angular-autocomplete.git"
+    "url": "git+https://github.com/tkoseoglu/watg-angular-fileupload.git"
   },
   "author": "Tolga Koseoglu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tkoseoglu/watg-angular-autocomplete/issues"
+    "url": "https://github.com/tkoseoglu/watg-angular-fileupload/issues"
   },
-  "homepage": "https://github.com/tkoseoglu/watg-angular-autocomplete#readme",
+  "homepage": "https://github.com/tkoseoglu/watg-angular-fileupload#readme",
   "devDependencies": {
     "bower-files": "^3.7.0",
     "grunt": "^0.4.5",

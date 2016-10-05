@@ -159,7 +159,7 @@ module.exports = function(grunt) {
                 }
             },
             dist: {
-                src: ['app/directives/templates/*.html'],
+                src: ['src/app/directives/templates/*.html'],
                 dest: 'dist/js/watg-angular-fileupload.tpl.js'
             }
         }
