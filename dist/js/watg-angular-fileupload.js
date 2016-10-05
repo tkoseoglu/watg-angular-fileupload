@@ -77,7 +77,7 @@
                                         reader.readAsDataURL(selectedFile);
                                         reader.onload = validateFile(selectedFile);
                                     } else {
-                                        scope.messages.push("Invalid File Extension " + selectedFileExtension);
+                                        scope.messages.push(selectedFile.name + " has an invalid file extension " + selectedFileExtension);
                                     }
                                 }
                                 scope.config.IsBusy = false;
