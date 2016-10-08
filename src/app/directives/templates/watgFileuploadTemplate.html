@@ -2,7 +2,7 @@
 <span class="btn btn-primary btn-file">
    <i class="fa fa-plus" ng-hide="config.IsBusy"></i>
    <i class="fa fa-refresh fa-spin"
-      ng-show="config.IsBusy"></i> Add
+      ng-show="config.IsBusy"></i> Browse...
    <input type="file" id="file"
       name="file" multiple />
 </span>
@@ -19,7 +19,7 @@
    <div ng-repeat="f in config.Files"
       class="row">
       <div class="col-sm-5">
-         <div class="input-group">
+         <div class="input-group" style="margin-bottom: 2px">
             <input name="fileName" class="form-control input-sm"
                type="text" ng-model="f.name"
                ng-disabled="true"

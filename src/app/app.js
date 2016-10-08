@@ -2,7 +2,6 @@
 	"use strict";
 	angular.module("watgFileuploadModule", [
     	"ngRoute",
-        "ngSanitize",
-        "watgFileupload.templates"
+        "ngSanitize"
     ]);
 })();

@@ -5,6 +5,7 @@
     function watgFileupload() {
         return {
             restrict: "E",
+            //templateUrl: 'src/app/directives/templates/watgFileuploadTemplate.html',
             templateUrl: 'app/directives/templates/watgFileuploadTemplate.html',
             scope: {
                 config: "="
@@ -24,10 +25,11 @@
                             image.src = e.target.result;
                             scope.imageSrc = image.src;
                             if (!scope.config.MaxFileSize) scope.config.MaxFileSize = (1024 * 1024) * 5;
-                            if (!scope.config.MaxImageHeight) scope.config.MaxImageHeight = 600;
-                            if (!scope.config.MaxImageWidth) scope.config.MaxImageWidth = 600;
-                            if (!scope.config.MinImageHeight) scope.config.MinImageHeight = 30;
-                            if (!scope.config.MinImageWidth) scope.config.MinImageWidth = 30;
+                            if (!scope.config.MaxImageHeight) scope.config.MaxImageHeight = 800;
+                            if (!scope.config.MaxImageWidth) scope.config.MaxImageWidth = 1200;
+                            if (!scope.config.MinImageHeight) scope.config.MinImageHeight = 15;
+                            if (!scope.config.MinImageWidth) scope.config.MinImageWidth = 15;
+                            if (!scope.config.MaxNumberOfFiles) scope.config.MaxNumberOfFiles = 3;
                             if (image.height > 0) {
                                 if (image.height > scope.config.MaxImageHeight) {
                                     isValid = false;
@@ -52,7 +54,13 @@
                                 isValid = false;
                                 scope.messages.push("File " + theFile.name + " (" + (theFile.size / (1024 * 1024)).toFixed(2) + " MB) exceeds the max size limit of " + (scope.config.MaxFileSize / (1024 * 1024)).toFixed(2) + " MB.");
                             }
-                            if (isValid && scope.config.Files) scope.config.Files.push(theFile);
+                            if (isValid && scope.config.Files) {
+                                if (scope.config.Files.length < scope.config.MaxNumberOfFiles) {
+                                    scope.config.Files.push(theFile);
+                                } else {
+                                    scope.messages.push("Maximum number of files reached. (" + scope.config.MaxNumberOfFiles + ")");
+                                }
+                            }
                             scope.isBusy = false;
                             scope.$apply();
                         };

@@ -29,8 +29,5 @@
     "grunt-contrib-watch": "^0.6.1",
     "lite-server": "^2.0.1",
     "grunt-html2js": "^0.3.3"
-  },
-  "dependencies": {
-    "lite-server": "^2.0.1"
   }
 }

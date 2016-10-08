@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"selec",
+				"selectedFileExtension"
+			],
+			[
 				"jquery",
 				"jquery-ui"
 			],
@@ -199,10 +203,37 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/bower_components/font-awesome",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/bower_components/font-awesome/css",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/dev",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/dev/js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/dist/css",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/dist/js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/core",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/directives",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/directives/templates",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/tests"
+	],
 	"file_history":
 	[
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/tests/testController.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/directives/templates/watgFileuploadTemplate.html",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/directives/watgFileuploadDirective.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/app.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/index.html",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/core/app.config.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/gruntfile.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/bower.json",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/tests/testView.html",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/README.md",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/appDist.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/package.json",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/tests/testController.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/assets/watg-angular-fileupload.css",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/directives/watgAutocompleteDirective.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-autocomplete/src/app/tests/testView.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-autocomplete/src/app/directives/watgAutocompleteDirective.js",
@@ -317,22 +348,11 @@
 		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/contactsService.js",
 		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/generalService.js",
 		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/listsService.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/mapService.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/pipelineService.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/projectNumberRequestsService.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/proposalsService.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/searchService.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/siteAnalyticsService.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/teamService.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/directives/addressDisplayDirective.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/directives/auditDisplayDirective.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/directives/autoCompleteAccountsDirective.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/directives/autoCompleteAccountsDirective2.js",
-		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/directives/autoCompleteAddressDirective.js"
+		"/D/Tolga/Code/WATG/WATG X/WATG/WATG.Crm.Web2/app/services/mapService.js"
 	],
 	"find":
 	{
-		"height": 130.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -447,7 +467,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 58.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -481,10 +501,10 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "watg-angular-autocomplete.sublime-project",
+	"project": "watg-angular-fileupload.sublime-project",
 	"replace":
 	{
-		"height": 112.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
