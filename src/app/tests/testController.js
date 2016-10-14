@@ -11,7 +11,10 @@
             MaxImageWidth: "",
             MinImageHeight: "",
             MinImageWidth: "",
-            AllowedFileExtensions: "png,jpg"
+            AllowedFileExtensions: "png,jpg",
+            Button: {
+                Style: "btn-danger"
+            }
         };
     }
 })();

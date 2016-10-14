@@ -174,7 +174,7 @@
 			"file": "src/app/directives/templates/watgFileuploadTemplate.html",
 			"settings":
 			{
-				"buffer_size": 1385,
+				"buffer_size": 1383,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -250,7 +250,6 @@
 	"expanded_folders":
 	[
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/dev/js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/core",
@@ -499,7 +498,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -528,7 +527,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -558,7 +557,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -574,8 +573,8 @@
 						"selection":
 						[
 							[
-								385,
-								385
+								3667,
+								3667
 							]
 						],
 						"settings":
@@ -585,10 +584,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 480.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -597,15 +596,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1385,
+						"buffer_size": 1383,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								204,
-								204
+								27,
+								27
 							]
 						],
 						"settings":
@@ -619,7 +618,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

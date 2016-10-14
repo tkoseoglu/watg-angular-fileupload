@@ -1,5 +1,6 @@
-<h4>Add {{config.Title}}</h4>
-<span class="btn btn-primary btn-file">
+<div>{{config.Title}}</div>
+<span class="btn btn-default btn-file"
+   ng-class="{'{{config.Button.Style}}':true}">
    <i class="fa fa-plus" ng-hide="config.IsBusy"></i>
    <i class="fa fa-refresh fa-spin"
       ng-show="config.IsBusy"></i> Browse...
@@ -35,7 +36,8 @@
       </div>
    </div>
 </div>
-<div class="alert alert-danger" ng-show="messages.length > 0">
+<div class="alert alert-danger"
+   ng-show="messages.length > 0">
    <div ng-repeat="m in messages">
       {{m}}
    </div>
