@@ -89,7 +89,7 @@
                                 scope.messages.push("File " + theFile.name + " (" + (theFile.size / (1024 * 1024)).toFixed(2) + " MB) exceeds the max size limit of " + (scope.config.MaxFileSize / (1024 * 1024)).toFixed(2) + " MB.");
                             }
                             if (isValid && scope.config.Files) {
-                                if (scope.config.Files.length < scope.config.MaxNumberOfFiles) {
+                                if (scope.config.Files.length <= scope.config.MaxNumberOfFiles) {
                                     scope.config.Files.push(theFile);
                                 } else {
                                     scope.messages.push("Maximum number of files reached. (" + scope.config.MaxNumberOfFiles + ")");
