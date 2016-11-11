@@ -160,24 +160,6 @@
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
-		},
-		{
-			"file": "src/app/directives/watgFileuploadDirective.js",
-			"settings":
-			{
-				"buffer_size": 5954,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/directives/templates/watgFileuploadTemplate.html",
-			"settings":
-			{
-				"buffer_size": 1383,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
 		}
 	],
 	"build_system": "",
@@ -259,18 +241,18 @@
 	],
 	"file_history":
 	[
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/directives/templates/watgFileuploadTemplate.html",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/tests/testController.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/directives/watgFileuploadDirective.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/app.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/package.json",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/core/app.config.js",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/directives/templates/watgFileuploadTemplate.html",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/directives/watgFileuploadDirective.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/index.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/gruntfile.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/bower.json",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/tests/testView.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/README.md",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/appDist.js",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/tests/testController.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/assets/watg-angular-fileupload.css",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-fileupload/src/app/directives/watgAutocompleteDirective.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-autocomplete/src/app/tests/testView.html",
@@ -498,7 +480,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -527,7 +509,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -543,8 +525,8 @@
 						"selection":
 						[
 							[
-								6169,
-								6169
+								625,
+								625
 							]
 						],
 						"settings":
@@ -554,68 +536,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/app/directives/watgFileuploadDirective.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5954,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3667,
-								3667
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 480.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/app/directives/templates/watgFileuploadTemplate.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1383,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								27,
-								27
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 240.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
