@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
     angular.module("watgFileuploadModule").controller("testController", ['$scope', testController]);
 
@@ -11,7 +11,8 @@
             MaxImageWidth: "",
             MinImageHeight: "",
             MinImageWidth: "",
-            AllowedFileExtensions: "png,jpg",
+            MaxNumberOfFiles: 2,
+            AllowedFileExtensions: "png,jpg,doc,docx,xls,xlsx",
             Button: {
                 Style: "btn-danger"
             }

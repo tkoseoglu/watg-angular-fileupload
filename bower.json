@@ -26,14 +26,14 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "*",
     "jquery-ui": "*",
     "jquery": "1.10.2",
-    "font-awesome": "fontawesome#^4.6.3"
+    "font-awesome": "fontawesome#^4.6.3",
+    "angular": "1.5.8",
+    "angular-route": "1.5.8",
+    "angular-sanitize": "1.5.8"
   },
   "devDependencies": {
-    "bootstrap": "*",
-    "angular-sanitize": "^1.5.0",
-    "angular-route": "^1.5.0"
+    "bootstrap": "*"
   }
 }
