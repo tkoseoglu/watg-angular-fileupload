@@ -5,7 +5,7 @@
 })();
 angular.module('watgFileuploadModule.const', [])
 
-.constant('CONST_FILEUPLOAD_TEMPLATE_URL', 'src/app/directives/templates/watgFileuploadTemplate.html')
+.constant('CONST_FILEUPLOAD_TEMPLATE_URL', 'app/directives/templates/watgFileuploadTemplate.html')
 
 ;
 (function() {
@@ -23,6 +23,8 @@ angular.module('watgFileuploadModule.const', [])
         };
 
         function link(scope, element) {
+
+            console.log("Fileupload Template URL %s", CONST_FILEUPLOAD_TEMPLATE_URL);
 
             function validateFile(theFile) {
                 return function(e) {

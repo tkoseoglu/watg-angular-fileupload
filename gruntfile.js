@@ -195,5 +195,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks('grunt-html2js');
     grunt.registerTask('dev', ['ngconstant:dev', "jshint", 'concat:dev', 'uglify:dev', 'concat_css:dev', 'cssmin:dev', 'copy', 'connect:dev', 'html2js:dev', 'watch']); //, 'watch'
-    grunt.registerTask('dist', ['ngconstant:dev', 'concat:dist', "jshint", 'uglify:dist', 'concat_css:dist', 'cssmin:dist', 'copy:dist', 'html2js:dist']);
+    grunt.registerTask('dist', ['ngconstant:dist', 'concat:dist', "jshint", 'uglify:dist', 'concat_css:dist', 'cssmin:dist', 'copy:dist', 'html2js:dist']);
 };

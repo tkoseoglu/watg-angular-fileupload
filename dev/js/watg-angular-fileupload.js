@@ -54,6 +54,8 @@ angular.module('watgFileuploadModule.const', [])
 
         function link(scope, element) {
 
+            console.log("Fileupload Template URL %s", CONST_FILEUPLOAD_TEMPLATE_URL);
+
             function validateFile(theFile) {
                 return function(e) {
                     var isValid = true;
