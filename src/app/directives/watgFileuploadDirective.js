@@ -1,23 +1,21 @@
-(function () {
+(function() {
     "use strict";
-    angular.module("watgFileuploadModule").directive("watgFileupload", watgFileupload);
+    angular.module("watgFileuploadModule").directive("watgFileupload", ["CONST_FILEUPLOAD_TEMPLATE_URL", watgFileupload]);
 
-    function watgFileupload() {
+    function watgFileupload(CONST_FILEUPLOAD_TEMPLATE_URL) {
         return {
             restrict: "E",
-            templateUrl: 'src/app/directives/templates/watgFileuploadTemplate.html',
-            //templateUrl: 'app/directives/templates/watgFileuploadTemplate.html',
+            templateUrl: CONST_FILEUPLOAD_TEMPLATE_URL,
             scope: {
                 config: "="
             },
             link: link
         };
 
-
         function link(scope, element) {
 
             function validateFile(theFile) {
-                return function (e) {
+                return function(e) {
                     var isValid = true;
                     var image = new Image();
                     image.src = e.target.result;
@@ -68,7 +66,7 @@
                 scope.messages = [];
                 scope.imageSrc = "";
                 if (scope.config !== null && scope.config !== undefined) {
-                    element.bind("change", function (e) {
+                    element.bind("change", function(e) {
                         scope.messages = [];
                         var selectedFiles = (e.srcElement || e.target).files;
                         if (selectedFiles) {
@@ -101,4 +99,4 @@
             }
         }
     }
-} ());
+}());

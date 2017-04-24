@@ -1,4 +1,5 @@
 (function() {
-	"use strict";
-	angular.module("watgFileuploadModule", ["watgFileupload.templates"]);
+    "use strict";
+    var modules = ['watgFileuploadModule.templates', 'watgFileuploadModule.const'];
+    angular.module("watgFileuploadModule", modules);
 })();

@@ -1,57 +1,61 @@
 (function() {
-	"use strict";
-	angular.module("watgFileuploadModule", [
-    	"ngRoute",
-        "ngSanitize"
+    "use strict";
+    angular.module("watgFileuploadModule", [
+        "ngRoute",
+        "ngSanitize",
+        'watgFileuploadModule.const'
     ]);
 })();
-
 (function() {
-	var app = angular.module('watgFileuploadModule');
-	app.config(["$httpProvider", "$routeProvider", appConfig]);
-	app.run(appRun);
+    var app = angular.module('watgFileuploadModule');
+    app.config(["$httpProvider", "$routeProvider", appConfig]);
+    app.run(appRun);
 
-	function appConfig($httpProvider, $routeProvider) {
-		//this is for CORS operations
-		$httpProvider.defaults.useXDomain = true;
-		delete $httpProvider.defaults.headers.common['X-Requested-With'];
-		if (!$httpProvider.defaults.headers.get) {
-			$httpProvider.defaults.headers.get = {};
-		}
-		//disable IE ajax request caching
-		$httpProvider.defaults.headers.get['If-Modified-Since'] = 'Mon, 26 Jul 1997 05:00:00 GMT';
-		//routes
-		$routeProvider.when('/test', {
-			templateUrl: 'src/app/tests/testView.html',
-			controller: 'testController'
-		}).otherwise({
-			redirectTo: '/test'
-		});
-	}
+    function appConfig($httpProvider, $routeProvider) {
 
-	function appRun() {}
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+        if (!$httpProvider.defaults.headers.get) {
+            $httpProvider.defaults.headers.get = {};
+        }
+
+        $httpProvider.defaults.headers.common['If-Modified-Since'] = 'Mon, 26 Jul 1997 05:00:00 GMT';
+        $httpProvider.defaults.headers.common['Cache-Control'] = 'no-cache';
+        $httpProvider.defaults.headers.common['Pragma'] = 'no-cache';
+
+        $routeProvider.when('/test', {
+            templateUrl: 'src/app/tests/testView.html',
+            controller: 'testController'
+        }).otherwise({
+            redirectTo: '/test'
+        });
+    }
+
+    function appRun() {}
 })();
+angular.module('watgFileuploadModule.const', [])
 
-(function () {
+.constant('CONST_FILEUPLOAD_TEMPLATE_URL', 'src/app/directives/templates/watgFileuploadTemplate.html')
+
+;
+(function() {
     "use strict";
-    angular.module("watgFileuploadModule").directive("watgFileupload", watgFileupload);
+    angular.module("watgFileuploadModule").directive("watgFileupload", ["CONST_FILEUPLOAD_TEMPLATE_URL", watgFileupload]);
 
-    function watgFileupload() {
+    function watgFileupload(CONST_FILEUPLOAD_TEMPLATE_URL) {
         return {
             restrict: "E",
-            templateUrl: 'src/app/directives/templates/watgFileuploadTemplate.html',
-            //templateUrl: 'app/directives/templates/watgFileuploadTemplate.html',
+            templateUrl: CONST_FILEUPLOAD_TEMPLATE_URL,
             scope: {
                 config: "="
             },
             link: link
         };
 
-
         function link(scope, element) {
 
             function validateFile(theFile) {
-                return function (e) {
+                return function(e) {
                     var isValid = true;
                     var image = new Image();
                     image.src = e.target.result;
@@ -102,7 +106,7 @@
                 scope.messages = [];
                 scope.imageSrc = "";
                 if (scope.config !== null && scope.config !== undefined) {
-                    element.bind("change", function (e) {
+                    element.bind("change", function(e) {
                         scope.messages = [];
                         var selectedFiles = (e.srcElement || e.target).files;
                         if (selectedFiles) {
@@ -135,8 +139,7 @@
             }
         }
     }
-} ());
-
+}());
 (function () {
     "use strict";
     angular.module("watgFileuploadModule").controller("testController", ['$scope', testController]);
