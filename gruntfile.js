@@ -127,8 +127,21 @@ module.exports = function(grunt) {
         },
         watch: {
             files: ["src/app/app.js", "src/app/core/*.js", "src/app/**/*.js", "src/assets/*.css"],
-            tasks: ['concat:app', 'uglify', 'concat_css', 'cssmin:assets']
+            tasks: ['concat:dev', 'uglify:dev', 'concat_css:dev', 'cssmin:dev']
         },
+        // watch: {
+        //     appJs: {
+        //         files: ["src/ap/app.js", "src/app/core/*.js", "src/app/**/*.js"],
+        //         tasks: ["concat:dev", "uglify:dev"]
+        //     },          
+        //     appLess: {
+        //         files: ["src/assets/*.css"],
+        //         tasks: ['concat_css:dev', 'cssmin:dev']
+        //     },
+        //     options: {
+        //         livereload: 35729
+        //     }
+        // },
         copy: {
             dev: {
                 files: [{
