@@ -78,7 +78,7 @@ angular.module('watgFileuploadModule.const', [])
                 scope.messages = [];
                 scope.imageSrc = "";
                 if (scope.config !== null && scope.config !== undefined) {
-                    element.bind("change", function(e) {
+                    $(".filePicker").bind("change", function(e) {
                         scope.messages = [];
                         var selectedFiles = (e.srcElement || e.target).files;
                         if (selectedFiles) {
