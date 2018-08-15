@@ -1,60 +1,65 @@
 <div>
-    {{config.Title}}&nbsp;<span>({{config.AllowedFileExtensions}} extensions only)</span>
+   {{config.Title}}&nbsp;<span>({{config.AllowedFileExtensions}} extensions only)</span>
 </div>
-<span class="btn btn-default btn-file filePicker"
-    ng-class="{'{{config.Button.Style}}':true}">
-   <i class="fa fa-plus" ng-hide="config.IsBusy"></i>
+<span id="{{config.id}}"
+   class="btn btn-default btn-file"
+   ng-class="{'{{config.Button.Style}}':true}">
+   <i class="fa fa-plus"
+      ng-hide="config.IsBusy"></i>
    <i class="fa fa-refresh fa-spin"
       ng-show="config.IsBusy"></i> Browse...
-   <input type="file" id="file"
-      name="file" multiple />
+   <input type="file"
+      id="file"
+      name="file"
+      multiple />
 </span>
 <br />
 <br />
 
 <!-- messages -->
 <div class="alert alert-danger"
-    ng-show="fileSelectMessages.length > 0">
-    <div ng-repeat="m in fileSelectMessages">
-        {{m}}
-    </div>
+   ng-show="fileSelectMessages.length > 0">
+   <div ng-repeat="m in fileSelectMessages">
+      {{m}}
+   </div>
 </div>
 
 <!-- selected files -->
 <div ng-show="config.Files.length > 0">
-    <label>New {{config.Title}} ({{config.Files.length}})</label>
-    <div ng-repeat="f in config.Files"
-        class="row">
-        <div class="col-sm-5">
-            <div class="input-group"
-                style="margin-bottom: 2px">
-                <input name="fileName"
-                    class="form-control input-sm"
-                    type="text"
-                    ng-model="f.name"
-                    ng-disabled="true" />
-                <span class="input-group-btn">
-                  <button type="button" class="btn btn-danger btn-sm"
-                      title="remove"
-                      ng-click="config.Files.splice($index, 1)">
-                      <i class="fa fa-remove"></i>
-                  </button>
-                </span>
-            </div>
-        </div>
-        <div class="col-sm-5">
-            <input name="fileDescription"
-                class="form-control input-sm"
-                type="text"
-                ng-model="f.description" />
-        </div>
-    </div>
+   <label>New {{config.Title}} ({{config.Files.length}})</label>
+   <div ng-repeat="f in config.Files"
+      class="row">
+      <div class="col-sm-5">
+         <div class="input-group"
+            style="margin-bottom: 2px">
+            <input name="fileName"
+               class="form-control input-sm"
+               type="text"
+               ng-model="f.name"
+               ng-disabled="true" />
+            <span class="input-group-btn">
+               <button type="button"
+                  class="btn btn-danger btn-sm"
+                  title="remove"
+                  ng-click="config.Files.splice($index, 1)">
+                  <i class="fa fa-remove"></i>
+               </button>
+            </span>
+         </div>
+      </div>
+      <div class="col-sm-5">
+         <input name="fileDescription"
+            class="form-control input-sm"
+            type="text"
+            ng-model="f.description" />
+      </div>
+   </div>
 </div>
 <div class="alert alert-danger"
-    ng-show="messages.length > 0">
-    <div ng-repeat="m in messages">
-        {{m}}
-    </div>
+   ng-show="messages.length > 0">
+   <div ng-repeat="m in messages">
+      {{m}}
+   </div>
 </div>
 <!-- <pre>{{config|json}}</pre>
 <pre>{{messages|json}}</pre> -->
