@@ -4,6 +4,25 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        ngconstant: {
+            // Options for all targets
+            options: {
+                space: " ",
+                dest: "src/app/core/app.const.js",
+                name: "watgFileuploadModule.const"
+            },
+            // Environment targets
+            dev: {
+                constants: {
+                    "CONST_FILEUPLOAD_TEMPLATE_URL": "src/app/directives/templates/watgFileuploadTemplate.html"
+                }
+            },
+            dist: {
+                constants: {
+                    "CONST_FILEUPLOAD_TEMPLATE_URL": "app/directives/templates/watgFileuploadTemplate.html"
+                }
+            }
+        },
         connect: {
             dev: {
                 options: {
@@ -25,12 +44,12 @@ module.exports = function(grunt) {
             beforeconcat: ["gruntfile.js", "app/**/*.js"]
         },
         concat: {
-            app: {
+            dev: {
                 src: ["src/app/app.js", "src/app/core/*.js", "src/app/directives/*.js", "src/app/tests/*.js"],
                 dest: "dev/js/watg-angular-fileupload.js"
             },
-            appDist: {
-                src: ['src/app/appdist.js', 'src/app/directives/watgFileuploadDirective.js'],
+            dist: {
+                src: ['src/app/appdist.js', 'src/app/core/app.const.js', 'src/app/directives/watgFileuploadDirective.js'],
                 dest: 'dist/js/watg-angular-fileupload.js'
             },
             vendor: {
@@ -61,23 +80,23 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
                 mangle: false
             },
-            app: {
+            dev: {
                 files: {
                     'dev/js/watg-angular-fileupload.min.js': ['dev/js/watg-angular-fileupload.js']
                 }
             },
-            appDist: {
+            dist: {
                 files: {
                     'dist/js/watg-angular-fileupload.min.js': ['dist/js/watg-angular-fileupload.js']
                 }
             }
         },
         concat_css: {
-            assets: {
+            dev: {
                 src: ["src/assets/watg-angular-fileupload.css"],
                 dest: "dev/css/watg-angular-fileupload.css"
             },
-            assetsDist: {
+            dist: {
                 src: ["src/assets/watg-angular-fileupload.css"],
                 dest: "dist/css/watg-angular-fileupload.css"
             }
@@ -86,12 +105,12 @@ module.exports = function(grunt) {
             options: {
                 keepSpecialComments: 0
             },
-            assets: {
+            dev: {
                 files: {
                     'dev/css/watg-angular-fileupload.min.css': ['dev/css/watg-angular-fileupload.css']
                 }
             },
-            assetsDist: {
+            dist: {
                 files: {
                     'dist/css/watg-angular-fileupload.min.css': ['dist/css/watg-angular-fileupload.css']
                 }
@@ -108,12 +127,24 @@ module.exports = function(grunt) {
         },
         watch: {
             files: ["src/app/app.js", "src/app/core/*.js", "src/app/**/*.js", "src/assets/*.css"],
-            tasks: ['concat:app', 'uglify', 'concat_css', 'cssmin:assets']
+            tasks: ['concat:dev', 'uglify:dev', 'concat_css:dev', 'cssmin:dev']
         },
+        // watch: {
+        //     appJs: {
+        //         files: ["src/ap/app.js", "src/app/core/*.js", "src/app/**/*.js"],
+        //         tasks: ["concat:dev", "uglify:dev"]
+        //     },          
+        //     appLess: {
+        //         files: ["src/assets/*.css"],
+        //         tasks: ['concat_css:dev', 'cssmin:dev']
+        //     },
+        //     options: {
+        //         livereload: 35729
+        //     }
+        // },
         copy: {
             dev: {
-                files: [
-                    {
+                files: [{
                         expand: true,
                         src: ['bower_components/fontawesome/fonts/*', 'bower_components/bootstrap/fonts/*'],
                         dest: 'dev/fonts/',
@@ -130,21 +161,19 @@ module.exports = function(grunt) {
                 ]
             },
             dist: {
-                files: [
-                    {
-                        expand: true,
-                        src: ["src/assets/images/*"],
-                        dest: 'dist/css/images/',
-                        filter: 'isFile',
-                        flatten: true
-                    }
-                ]
+                files: [{
+                    expand: true,
+                    src: ["src/assets/images/*"],
+                    dest: 'dist/css/images/',
+                    filter: 'isFile',
+                    flatten: true
+                }]
             }
         },
         html2js: {
             options: {
                 base: 'src',
-                module: 'watgFileupload.templates',
+                module: 'watgFileuploadModule.templates',
                 singleModule: true,
                 useStrict: true,
                 htmlmin: {
@@ -168,6 +197,7 @@ module.exports = function(grunt) {
             }
         }
     });
+    grunt.loadNpmTasks('grunt-ng-constant');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-concat-css');
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -177,6 +207,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks('grunt-html2js');
-    grunt.registerTask('dev', ["jshint", 'concat', 'uglify', 'concat_css', 'cssmin', 'copy', 'connect:dev', 'html2js:dev', 'watch']); //, 'watch'
-    grunt.registerTask('dist', ['concat:appDist', 'uglify:appDist', 'concat_css:assetsDist', 'cssmin:assetsDist', 'copy:dist', 'html2js:dist']);
+    grunt.registerTask('dev', ['ngconstant:dev', "jshint", 'concat:dev', 'uglify:dev', 'concat_css:dev', 'cssmin:dev', 'copy', 'connect:dev', 'html2js:dev', 'watch']); //, 'watch'
+    grunt.registerTask('dist', ['ngconstant:dist', 'concat:dist', "jshint", 'uglify:dist', 'concat_css:dist', 'cssmin:dist', 'copy:dist', 'html2js:dist']);
 };
