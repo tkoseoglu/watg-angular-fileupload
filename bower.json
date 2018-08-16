@@ -2,19 +2,17 @@
    "name": "watg-angular-fileupload",
    "version": "2.0.6",
    "homepage": "https://github.com/tkoseoglu/watg-angular-fileupload",
-   "author": {
-      "name": "Tolga Koseoglu",
-      "email": "tolga.k@outlook.com",
-      "url": "https://github.com/tkoseoglu"
-   },
-   "description": "angular fileupload directive.",
+   "authors": [
+      "Tolga <tolga.k@outlook.com>"
+   ],
+   "main": "dist/js/watg-angular-fileupload.js",
+   "description": "angularjs file upload module for WATG",
    "keywords": [
       "angularjs",
       "fileupload",
       "directive",
-      "jquery-ui"
+      "watg"
    ],
-   "main": "dist/js/watg-angular-fileupload.js",
    "license": "MIT",
    "ignore": [
       "**/.*",
@@ -26,14 +24,7 @@
       "tests"
    ],
    "dependencies": {
-      "jquery-ui": "*",
       "jquery": "1.10.2",
-      "font-awesome": "fontawesome#^4.6.3",
-      "angular": "1.5.8",
-      "angular-route": "1.5.8",
-      "angular-sanitize": "1.5.8"
-   },
-   "devDependencies": {
-      "bootstrap": "*"
+      "jquery-ui": "1.11.4"
    }
 }

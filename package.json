@@ -1,8 +1,14 @@
 {
    "name": "watg-angular-fileupload",
-   "version": "2.0.6",
-   "description": "",
-   "main": "gruntfile.js",
+   "version": "2.0.8",
+   "description": "angularjs file upload module for WATG",
+   "keywords": [
+      "angularjs",
+      "fileupload",
+      "directive",
+      "watg"
+   ],
+   "main": "./dist/js/watg-angular-fileupload.min.js",
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
    },
@@ -16,6 +22,11 @@
       "url": "https://github.com/tkoseoglu/watg-angular-fileupload/issues"
    },
    "homepage": "https://github.com/tkoseoglu/watg-angular-fileupload#readme",
+   "dependencies": {
+      "angular": "^1.5.8",
+      "angular-route": "^1.5.8",
+      "angular-sanitize": "^1.5.8"
+   },
    "devDependencies": {
       "bower-files": "^3.7.0",
       "grunt": "^0.4.5",
@@ -27,10 +38,8 @@
       "grunt-contrib-jshint": "^0.12.0",
       "grunt-contrib-uglify": "^0.9.1",
       "grunt-contrib-watch": "^0.6.1",
-      "lite-server": "^2.0.1",
-      "grunt-html2js": "^0.3.3"
-   },
-   "dependencies": {
-      "grunt-ng-constant": "^2.0.1"
+      "grunt-html2js": "^0.5.1",
+      "grunt-ng-constant": "^2.0.1",
+      "lite-server": "^2.4.0"
    }
 }
